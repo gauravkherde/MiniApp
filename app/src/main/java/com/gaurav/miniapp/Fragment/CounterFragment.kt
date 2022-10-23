@@ -1,4 +1,4 @@
-package com.gaurav.miniapp.ui.main
+package com.gaurav.miniapp.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

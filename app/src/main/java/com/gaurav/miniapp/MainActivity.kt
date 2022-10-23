@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         fm.beginTransaction().add(R.id.MainContainer, mainFragment).commit()
 
     }
+    @Suppress("DEPRECATION")
     override fun onBackPressed() {
         if (fragmentManager.backStackEntryCount != 0) {
             fragmentManager.popBackStack()

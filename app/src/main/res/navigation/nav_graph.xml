@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/counterFragment"
-        android:name="com.gaurav.miniapp.ui.main.CounterFragment"
+        android:name="com.gaurav.miniapp.Fragment.CounterFragment"
         android:label="fragment_counter"
         tools:layout="@layout/fragment_counter" >
         <action

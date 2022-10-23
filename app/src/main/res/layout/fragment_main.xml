@@ -8,92 +8,177 @@
     android:background="?android:windowBackground"
     tools:context=".ui.main.MainFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/FirstRow"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/FirstCard"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="25dp"
-            app:layout_constraintStart_toStartOf="@+id/FirstRow"
-            app:layout_constraintTop_toTopOf="@id/FirstRow">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/FirstRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/SecondRow">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="top"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="12.5dp"
-                android:src="@drawable/ic_launcher_background" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/FirstCard"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="58dp"
-                android:id="@+id/counter"
-                android:text="First" />
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/SecondCard"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="25dp"
-            app:layout_constraintStart_toEndOf="@+id/FirstCard"
-            app:layout_constraintTop_toTopOf="@id/FirstRow"
-            app:layout_constraintEnd_toStartOf="@+id/ThirdCart">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="top"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="12.5dp"
-                android:src="@drawable/ic_launcher_background" />
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="58dp"
+                    android:gravity="center_horizontal"
+                    android:text="Counter" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="58dp"
-                android:text="second" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SecondCard"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/ThirdCart"
+                app:layout_constraintStart_toEndOf="@+id/FirstCard"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/ThirdCart"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            app:layout_constraintTop_toTopOf="@id/FirstRow"
-            android:layout_marginStart="25dp"
-            app:layout_constraintStart_toEndOf="@+id/SecondCard"
-            app:layout_constraintEnd_toEndOf="parent">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background" />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="top"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="12.5dp"
-                android:src="@drawable/ic_launcher_background" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="58dp"
+                    android:gravity="center_horizontal"
+                    android:text="Mirror" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="58dp"
-                android:text="Third" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ThirdCart"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SecondCard"
+                app:layout_constraintTop_toTopOf="parent">
 
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="58dp"
+                    android:gravity="center_horizontal"
+                    android:text="Torch" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/SecondRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FirstRow">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SecondRowFirstCard"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="58dp"
+                    android:gravity="center_horizontal"
+                    android:text="Calculator" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SecondRowSecondCard"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/SecondRowThirdCart"
+                app:layout_constraintStart_toEndOf="@+id/SecondRowFirstCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="58dp"
+                    android:gravity="center_horizontal"
+                    android:text="second" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SecondRowThirdCart"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/SecondRowSecondCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="12.5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="58dp"
+                    android:gravity="center_horizontal"
+                    android:text="Third" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

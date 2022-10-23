@@ -9,7 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.gaurav.miniapp.Fragment.CalculatorFragment
+import com.gaurav.miniapp.Fragment.CounterFragment
+import com.gaurav.miniapp.Fragment.MirrorFragment
+import com.gaurav.miniapp.Fragment.TorchFragment
 import com.gaurav.miniapp.R
+import com.gaurav.miniapp.databinding.FragmentCalculatorBinding
 import com.gaurav.miniapp.databinding.FragmentMainBinding
 
 
@@ -21,39 +26,34 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        //  binding = FragmentMainBinding.inflate(layoutInflater, container, false)
+          binding = FragmentMainBinding.inflate(layoutInflater, container, false)
         val view = inflater.inflate(R.layout.fragment_main, container, false)
-        var counter = view.findViewById<CardView>(R.id.FirstCard)
-        var mirror = view.findViewById<CardView>(R.id.SecondCard)
-        var torch = view.findViewById<CardView>(R.id.ThirdCart)
-        counter.setOnClickListener {
+
+        binding.FirstCard.setOnClickListener {
             val counterFragment = CounterFragment()
             val transaction = requireFragmentManager().beginTransaction()
             transaction.add(R.id.mainFragment, counterFragment, null).addToBackStack(null).commit()
 
         }
-        mirror.setOnClickListener {
-            /*val mirrorFragment = MirrorFragment()
+        binding.SecondCard.setOnClickListener {
+            val mirrorFragment = MirrorFragment()
             val transaction = requireFragmentManager().beginTransaction()
-            transaction.add(R.id.mainFragment, mirrorFragment, null).addToBackStack(null).commit()*/
-            val ctx: Context = requireContext() // or you can replace **'this'** with your **ActivityName.this**
-
-            try {
-                val i: Intent? =
-                    ctx.packageManager.getLaunchIntentForPackage("MediaStore.ACTION_IMAGE_CAPTURE")
-                ctx.startActivity(i)
-            } catch (e: PackageManager.NameNotFoundException) {
-                // TODO Auto-generated catch block
-            }
+            transaction.add(R.id.mainFragment, mirrorFragment, null).addToBackStack(null).commit()
 
         }
-        torch.setOnClickListener {
+        binding.ThirdCart.setOnClickListener {
             val torchFragment = TorchFragment()
             val transaction = requireFragmentManager().beginTransaction()
             transaction.add(R.id.mainFragment, torchFragment, null).addToBackStack(null).commit()
 
         }
-        return view
+        binding.SecondRowFirstCard.setOnClickListener {
+            val calculator = CalculatorFragment()
+            val transaction = requireFragmentManager().beginTransaction()
+            transaction.add(R.id.mainFragment, calculator, null).addToBackStack(null).commit()
+
+        }
+        return binding.root
 
     }
 

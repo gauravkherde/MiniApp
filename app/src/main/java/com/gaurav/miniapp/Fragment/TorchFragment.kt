@@ -1,4 +1,4 @@
-package com.gaurav.miniapp.ui.main
+package com.gaurav.miniapp.Fragment
 
 import android.content.Context.CAMERA_SERVICE
 import android.content.pm.PackageManager

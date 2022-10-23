@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:background="?android:windowBackground"
     android:layout_height="match_parent"
-    tools:context=".ui.main.TorchFragment">
+    tools:context=".Fragment.TorchFragment">
 
     <ToggleButton
         android:id="@+id/onOffFlashlight"
